@@ -78,5 +78,16 @@ let lastCharIsOperator
 equalButton.addEventListener('click',function(){
     final = eval(finalResult)
     outPut.innerHTML=final
+    finalResult = final
     console.log(final)
+})
+
+let alertTitle = document.querySelector('#alertTitle')
+
+
+let useless = document.querySelectorAll('.useless')
+useless.forEach((element)=>{
+    element.addEventListener('click',function(){
+        alertTitle.innerHTML = "Useless button :) I'm sorry."     
+    })
 })

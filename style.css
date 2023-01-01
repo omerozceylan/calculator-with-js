@@ -1,9 +1,11 @@
 body {
     background-color:#3C4048;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;   
     height: 90vh;
+
 }
 *{
     font-size: 30px;
@@ -14,7 +16,7 @@ body {
     display: flex;
     flex-direction: column;
     background-color: #1C191C;
-    
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
  
 }
 
@@ -47,6 +49,11 @@ body {
     height: 80px;
     border-top: 1px solid #777;
     border-right: 1px solid #666; 
+    transition: 0.3s;
+}
+
+.number-button:hover {
+    background-color: #E8C4C4;
 }
 
 .operators {
@@ -60,12 +67,14 @@ body {
     height: 80px;
     border-top: 1px solid #777;
     border-right: 1px solid #666; 
+    transition: 0.3s;
 }
 
-
+.operator-button:hover {
+    background-color: #E8C4C4;
+}
 
 .up-side-button-container {
-
     display: flex;
 }
 
@@ -94,3 +103,13 @@ body {
     background-color: #e66026;
 }
 
+.text-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 60px;
+    margin-bottom: 50px;
+    color: #E8C4C4;
+    transition: 0.5s;
+}
