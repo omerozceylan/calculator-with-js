@@ -70,6 +70,7 @@ cButton.addEventListener('click', function(){
     console.log(finalResult)
     console.clear()
     outPut.innerHTML='0'
+    alertDiv.removeChild(alertTitle)
 })
 
 let equalButton = document.querySelector('#equalButton')
@@ -82,12 +83,13 @@ equalButton.addEventListener('click',function(){
     console.log(final)
 })
 
-let alertTitle = document.querySelector('#alertTitle')
-
+let alertTitle = document.createElement('h1')
+alertTitle.innerHTML = "Useless button :) I'm sorry."
+let alertDiv = document.querySelector('.text-container')
 
 let useless = document.querySelectorAll('.useless')
 useless.forEach((element)=>{
     element.addEventListener('click',function(){
-        alertTitle.innerHTML = "Useless button :) I'm sorry."     
+        alertDiv.appendChild(alertTitle)
     })
 })
