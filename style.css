@@ -10,14 +10,17 @@ body {
 *{
     font-size: 30px;
     font-family: 'Playfair Display', serif;
+    scroll-snap-align: end;
+    box-sizing: border-box;
 }
 
 .container {
     display: flex;
+    width: 320px;
     flex-direction: column;
     background-color: #1C191C;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
- 
+    
 }
 
 .container-down {
@@ -27,19 +30,28 @@ body {
 }
 
 .container-up-side-inner{
+    
     display: flex;
     align-items: center;
     width: 100%;
     height: 100px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+    scroll-snap-type: mandatory;
     font-size: 50px;
     padding: 10px;
     color: aliceblue;
 }
 
+.container-up-side-inner::-webkit-scrollbar{
+    display: none;
+}
+
 .container-numbers {
-    display: flex;
-    flex-wrap: wrap;
-    width: 240px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    width: 100%;
     height: 160px;
 }
 

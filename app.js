@@ -30,6 +30,7 @@ operatorButtons.forEach((element)=>{
                 case '-':
                     finalResult+=op
                     outPut.innerHTML=finalResult
+                    outPut.scroll(outPut.scrollWidth,0)
                     isOperatorClicked=true
                     break       
             }
@@ -54,11 +55,13 @@ function takeInput(){
                     console.log(finalResult)
                     isStartWithZero=false  
                     outPut.innerHTML=finalResult
+                    outPut.scroll(outPut.scrollWidth,0)
                 }else{
                     console.log(clickedButton)
                     console.log(finalResult);
                 }
                 outPut.innerHTML=finalResult
+                outPut.scroll(outPut.scrollWidth,0)
     }
     }
 
@@ -93,3 +96,5 @@ useless.forEach((element)=>{
         alertDiv.appendChild(alertTitle)
     })
 })
+
+outPut.scroll(0,outPut.scrollWidth)
