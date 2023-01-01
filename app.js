@@ -1,7 +1,7 @@
 let numberContainer = document.querySelector('.container-numbers')
 let outPut = document.querySelector('.container-up-side-inner')
 
-for(let i=1;i<10;i++){
+for(let i=9;i>0;i--){
     let button = document.createElement('button')
     button.classList.add('number-button')
     button.innerHTML = i
