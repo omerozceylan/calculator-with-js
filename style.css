@@ -159,3 +159,9 @@ button {
     color: #E8C4C4;
     transition: 0.5s;
 }
+
+@media only screen and(max-width:400px){
+    body {
+        touch-action: none;
+    }
+}
