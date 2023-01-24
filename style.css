@@ -92,11 +92,11 @@ button {
 }
 
 .operator-button {
+    background-color: white;
     border-color: #1C191C;
     border-width: 2px;
     border-style: solid;
     color: black;
-    background-color: #FB9617;
     text-align: center;
     cursor: pointer;
     width: 80px;
