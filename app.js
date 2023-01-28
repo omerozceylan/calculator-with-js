@@ -70,11 +70,9 @@ let cButton = document.querySelector('#cButton')
 cButton.addEventListener('click', function(){
     finalResult = '0'
     isStartWithZero = true
-    console.log(finalResult)
     outPut.innerHTML='0'
-    if(isAppend = true){
-        console.log('sss');
-        alertDiv.removeChild(alertTitle)
+    if(alertDiv.firstChild){
+        alertDiv.removeChild(alertDiv.firstChild)
         
     }
 })
@@ -92,13 +90,18 @@ equalButton.addEventListener('click',function(){
 let alertTitle = document.createElement('h1')
 alertTitle.innerText = "Useless button :) I'm sorry."
 let alertDiv = document.querySelector('.text-container')
-let isAppend = false
 
 let useless = document.querySelectorAll('.useless')
 useless.forEach((element)=>{
     element.addEventListener('click',function(){
+        let theButton = this.innerHTML
+        if(theButton=="%"){
+            let dvidedHundred = finalResult/100
+            finalResult=dvidedHundred
+            outPut.innerHTML = finalResult
+            return
+        }
         alertDiv.appendChild(alertTitle)
-        isAppend = true
     })
 })
 
