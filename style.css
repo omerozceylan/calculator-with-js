@@ -43,6 +43,7 @@ button {
 }
 
 .container-up-side-inner{
+    white-space: nowrap;
     
     display: flex;
     align-items: center;
